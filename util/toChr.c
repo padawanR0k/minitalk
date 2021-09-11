@@ -1,8 +1,8 @@
 #include <stdio.h>
 
-int	ft_pow(int n, int exp)
+int ft_pow(int n, int exp)
 {
-	int	sum;
+	int sum;
 
 	if (exp == 0)
 		return (1);
@@ -17,10 +17,10 @@ int	ft_pow(int n, int exp)
 	return (sum);
 }
 
-char	decompress(int bits[8])
+char toChr(int bits[8])
 {
-	int	c;
-	int	i;
+	int c;
+	int i;
 
 	c = 0;
 	i = 0;
@@ -36,8 +36,9 @@ char	decompress(int bits[8])
 int main()
 {
 	// int arr[8] = {0,0,1,1,1,1,1,1};
-	// printf("%c\n", decompress(arr));
-	int arr2[8] = {0,0,1,0,0,0,0,1};
-	printf("%c\n", decompress(arr2));
+	// printf("%c\n", toChr(arr));
+	// 1 + 32
+	int arr2[8] = {0, 0, 1, 0, 0, 0, 0, 1};
+	printf("%c\n", toChr(arr2));
 	return 0;
 }
